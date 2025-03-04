@@ -1,16 +1,24 @@
-let a =0;
+let count = 0;
 let b = +prompt("Mời bạn nhập số nguyên tố sẽ hiển thị");
+let number = 2;
+let d ='';
 if(b < 0 || isNaN(b)){
     console.log("du lieu nhap vao k hop le");
 }else{
-    for( let i = 0; i <= b; i ++){
-        for ( let j = 0; j <= b; j ++){
-            if(b % j == 0){
-                a ++;
+    while(count < b){
+        let a =0;
+        for ( let i = 1; i <= number; i ++){
+                if(number % i == 0){
+                    a++;
+         }
+        }
+         if (a == 2){
+                count++;
+                d += number+ ", ";
+                
             }
-        }
-        if(a == 2){
-            console.log(b + ", ");
-        }
+            number++;
     }
 }
+        console.log(d);
+        
